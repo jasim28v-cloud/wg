@@ -1,0 +1,10 @@
+{
+  "name": "DOKA Exclave VPN",
+  "short_name": "DOKA Exclave",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06060f",
+  "theme_color": "#6366f1",
+  "lang": "ar",
+  "dir": "rtl"
+}
