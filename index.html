@@ -140,7 +140,7 @@
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">سيرفر</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-green-400" style="text-shadow: 0 0 30px rgba(34,197,94,0.5);">2</span>
+                    <span class="text-3xl font-black text-green-400" style="text-shadow: 0 0 30px rgba(34,197,94,0.5);">3</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">🟢 نشط</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
@@ -148,11 +148,11 @@
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">💤 خامل</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-orange-400">1</span>
+                    <span class="text-3xl font-black text-orange-400">0</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">⚠️ خطر</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-emerald-400">0</span>
+                    <span class="text-3xl font-black text-emerald-400">1</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">🆕 جديد</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[120px]">
@@ -170,13 +170,10 @@
         <i class="fas fa-globe ml-1"></i> الكل (<span id="count-all">4</span>)
     </button>
     <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="active">
-        🟢 نشط (<span>2</span>)
-    </button>
-    <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="vless">
-        🔵 VLESS (<span>1</span>)
+        🟢 نشط (<span>3</span>)
     </button>
     <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="hysteria2">
-        🩷 Hysteria2 (<span>3</span>)
+        🩷 Hysteria2 (<span>4</span>)
     </button>
             <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" id="fav-filter-btn" data-filter="favorites" style="display:none;">
                 ⭐ المفضلة (<span id="count-fav">0</span>)
@@ -195,7 +192,7 @@
         <h2 class="text-xl font-bold mb-6 text-gray-300 flex items-center gap-3">
             <i class="fas fa-server text-indigo-400"></i> 
             سيرفرات Exclave VPN
-            <span class="text-xs text-gray-600">· 🟢2 💤1 ⚠️1</span>
+            <span class="text-xs text-gray-600">· 🟢3 💤1 ⚠️0</span>
             <span class="text-xs text-gray-600" id="last-copied-info"></span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="servers-grid"></div>
@@ -244,14 +241,14 @@
     </div>
 
     <script>
-        const serversData = [{"link": "exclave://vless?eNpTYWBgMLbQMwUjQ8MNkx0YGJamplqkmpgbmesamhtY6JoYJZvoWhqmGOoappiZWlhaGpkkmZvm5ec9LUn-AKIaG4tSE3MyS36Wl5fr5ZVlpmQm6iXnv13j65dZ7GtiEJCcmhMVbp7oZWyQZh4f4pjn6V_iV15ulBUQae5dVFmQXeQcaJaUaGFqaG6ZamyQYpKWvCk5oyg_9ylDRUlOsW5RQVGFbllmcWZ-nm5pSoGJyeaK0pQPDBxAl4NsZ8gwyi39wYACGpmAxKS3C_a83b4LTO4wNHRIrUjOSSxLLSvIAykBAH1wVAM", "proto": "VLESS", "proto_color": "blue", "proto_icon": "🔵", "proto_gradient": "from-blue-400 to-cyan-400", "proto_name": "VLESS", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 83, "is_new": false, "status": "warning", "added_time": "19:58", "added_date": "2026-05-11", "age_hours": 21.4}, {"link": "exclave://hysteria2?eNpjZ2BgMDbTMzI21DM0tNAzNN5mwcLAsNTcxCLNMs0oSdcgyThR18TEwkDXwjzZRNckKSU1LdHSwNLc1LzRNL0qpQKo1djI2FSvovJXIxAwoAMLA4sNMDY2-aSkT8UliXkpiUVPmIDcSW8X7Hm7fSeY3G5o5JBakZyTWJZaVpAHUgwAb-0shA", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 45, "is_new": false, "status": "idle", "added_time": "03:54", "added_date": "2026-05-12", "age_hours": 13.4}, {"link": "exclave://hysteria2?eNpjZ2BgyCrQMzQwMDQ0MNSrqPxlwcLAsDTZ1NTYONUsWdcsxSRN1yTJwFA3yTDZQtckLcnS1MjM2DDV3LgRVV8jEDCgAyNTA4MtMA42BUlJn4pLEvNSEoueMAG5k98u2PN2-3owuVXB0MghtSI5J7EstawgD6QaAPEILPI", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 78, "is_new": false, "status": "active", "added_time": "11:24", "added_date": "2026-05-12", "age_hours": 5.9}, {"link": "exclave://hysteria2?eNpjZ2BgMLfUMzQ21jM11zM02W7BwsCw1MAk2SjRwNJc1zQ1xULXxDLJTNfSwsxANznJxMzM3NTC2NzEtDE3p6LSUK8iMzE_J7OyVK_0cyMQMDKgASMD020wNlAeXZohKelTcUliXkpi0RMmIHfS2wV73m5fCSZXGRo5pFYk5ySWpZYV5IEUAwDGvS1O", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 45, "is_new": false, "status": "active", "added_time": "14:41", "added_date": "2026-05-12", "age_hours": 2.6}];
-        const statsData = {"last_updated": "2026-05-12T17:19:19.453903", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 4, "new_servers": 0, "deleted_old": 10, "active_servers": 2, "idle_servers": 1, "warning_servers": 1, "avg_ping": 62, "most_country": "غير معروف", "most_country_count": 4, "countries": {"غير معروف": 4}, "by_protocol": {"vless": 1, "hysteria2": 3}};
+        const serversData = [{"link": "exclave://hysteria2?eNpjZ2BgMDbTMzI21DM0tNAzNN5mwcLAsNTcxCLNMs0oSdcgyThR18TEwkDXwjzZRNckKSU1LdHSwNLc1LzRNL0qpQKo1djI2FSvovJXIxAwoAMLA4sNMDY2-aSkT8UliXkpiUVPmIDcSW8X7Hm7fSeY3G5o5JBakZyTWJZaVpAHUgwAb-0shA", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 84, "is_new": false, "status": "idle", "added_time": "03:54", "added_date": "2026-05-12", "age_hours": 16.2}, {"link": "exclave://hysteria2?eNpjZ2BgyCrQMzQwMDQ0MNSrqPxlwcLAsDTZ1NTYONUsWdcsxSRN1yTJwFA3yTDZQtckLcnS1MjM2DDV3LgRVV8jEDCgAyNTA4MtMA42BUlJn4pLEvNSEoueMAG5k98u2PN2-3owuVXB0MghtSI5J7EstawgD6QaAPEILPI", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 24, "is_new": false, "status": "active", "added_time": "11:24", "added_date": "2026-05-12", "age_hours": 8.6}, {"link": "exclave://hysteria2?eNpjZ2BgMLfUMzQ21jM11zM02W7BwsCw1MAk2SjRwNJc1zQ1xULXxDLJTNfSwsxANznJxMzM3NTC2NzEtDE3p6LSUK8iMzE_J7OyVK_0cyMQMDKgASMD020wNlAeXZohKelTcUliXkpi0RMmIHfS2wV73m5fCSZXGRo5pFYk5ySWpZYV5IEUAwDGvS1O", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 61, "is_new": false, "status": "active", "added_time": "14:41", "added_date": "2026-05-12", "age_hours": 5.4}, {"link": "exclave://hysteria2?eNpjZ2BgMLQw1TMz0zM31LPYbMHCwLDUzMwwOdXIOEnXPC3VUtfEyNBc1yIxKVXX3CzZyCLJzMLczNKwMSlHLy8zN7EoO18vv-h5IxAwoAMTk80wJjbppKRPxSWJeSmJRU-YgNzJbxfsebt9OZjcp2Bo5JBakZyTWJZaVpAHUg0AN7gsWg", "proto": "HYSTERIA2", "proto_color": "rose", "proto_icon": "🩷", "proto_gradient": "from-rose-400 to-pink-400", "proto_name": "Hysteria2", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 86, "is_new": true, "status": "active", "added_time": "20:03", "added_date": "2026-05-12", "age_hours": 0.0}];
+        const statsData = {"last_updated": "2026-05-12T20:03:38.141714", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 4, "new_servers": 1, "deleted_old": 10, "active_servers": 3, "idle_servers": 1, "warning_servers": 0, "avg_ping": 63, "most_country": "غير معروف", "most_country_count": 4, "countries": {"غير معروف": 4}, "by_protocol": {"hysteria2": 4}};
         const greetings = ["💪 أقوى السيرفرات بين يديك.", "⚡ سرعة وأمان في متناول اليد.", "🚀 انطلق بلا حدود مع Exclave.", "🛡️ درعك الرقمي جاهز.", "🔐 خصوصيتك أولويتنا.", "🌟 سيرفرات اليوم جاهزة للتصفح.", "💛 أهلاً بك! تصفح براحة تامة.", "📡 اتصال آمن · سرعة فائقة.", "🎯 دقة في الاختيار · حرية في التصفح.", "🌈 تصفح العالم كما تريد."];
         const MAX_AGE_HOURS = 24;
         let currentFilter = 'all';
         let chartInstances = {};
         const UPDATE_INTERVAL = 3 * 60 * 60;
-        const updateTime = new Date('2026-05-12T17:19:19.453903');
+        const updateTime = new Date('2026-05-12T20:03:38.141714');
         
         function getFavorites() { try { return JSON.parse(localStorage.getItem('doka_exclave_fav') || '[]'); } catch { return []; } }
         function saveFavorites(f) { localStorage.setItem('doka_exclave_fav', JSON.stringify(f)); }
