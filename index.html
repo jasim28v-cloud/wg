@@ -136,19 +136,19 @@
             
             <div class="flex flex-wrap justify-center gap-4 mb-6">
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">4</span>
+                    <span class="text-3xl font-black bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">2</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">سيرفر</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-green-400" style="text-shadow: 0 0 30px rgba(34,197,94,0.5);">2</span>
+                    <span class="text-3xl font-black text-green-400" style="text-shadow: 0 0 30px rgba(34,197,94,0.5);">0</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">🟢 نشط</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-amber-400">0</span>
+                    <span class="text-3xl font-black text-amber-400">2</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">💤 خامل</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
-                    <span class="text-3xl font-black text-orange-400">2</span>
+                    <span class="text-3xl font-black text-orange-400">0</span>
                     <p class="text-gray-500 text-[10px] mt-1.5 uppercase tracking-widest">⚠️ خطر</p>
                 </div>
                 <div class="stat-card px-6 py-4 text-center min-w-[100px]">
@@ -167,13 +167,13 @@
         <div class="flex flex-wrap justify-center gap-2" id="filter-tabs">
             
     <button class="tab-btn active px-4 py-2 rounded-full text-xs font-medium" data-filter="all">
-        <i class="fas fa-globe ml-1"></i> الكل (<span id="count-all">4</span>)
+        <i class="fas fa-globe ml-1"></i> الكل (<span id="count-all">2</span>)
     </button>
     <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="active">
-        🟢 نشط (<span>2</span>)
+        🟢 نشط (<span>0</span>)
     </button>
     <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="vless">
-        🔵 VLESS (<span>3</span>)
+        🔵 VLESS (<span>1</span>)
     </button>
     <button class="tab-btn px-4 py-2 rounded-full text-xs font-medium" data-filter="trojan">
         🟣 Trojan (<span>1</span>)
@@ -195,7 +195,7 @@
         <h2 class="text-xl font-bold mb-6 text-gray-300 flex items-center gap-3">
             <i class="fas fa-server text-indigo-400"></i> 
             سيرفرات Exclave VPN
-            <span class="text-xs text-gray-600">· 🟢2 💤0 ⚠️2</span>
+            <span class="text-xs text-gray-600">· 🟢0 💤2 ⚠️0</span>
             <span class="text-xs text-gray-600" id="last-copied-info"></span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="servers-grid"></div>
@@ -244,14 +244,14 @@
     </div>
 
     <script>
-        const serversData = [{"link": "exclave://vless?eNpTYWBgMDQw0TM00zM0tdAzMtm5m5GBYWmqaXKyoVmimW5qoomRrolZkpGuhVFiqm5iipGhqXmqoZmJYVJeft7T8s8ZGTlplXol5Zk5iSmJBRl5qXp5KVkFenmpX5r0GUCgsSQHj6JGEGAAkyDzGDiAOsCMDKPc0h8MKKCRCUhMfrtgz9vtK8DkMgUjA4fUiuScxLLUsoI8kBoA2dhFbw", "proto": "VLESS", "proto_color": "blue", "proto_icon": "🔵", "proto_gradient": "from-blue-400 to-cyan-400", "proto_name": "VLESS", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 113, "is_new": false, "status": "warning", "added_time": "20:26", "added_date": "2026-05-20", "age_hours": 23.6}, {"link": "exclave://vless?eNpVjr1KxTAAhaOTD-Ka0MakbTa5giCKg1L3NM29qeSPtCnlbn0Fn8DFRVzEwUEfxzsW7qibLU6e4TvL4ZxzDAAgFBUYYYpRmr1-HADwJNJacFysISk4g4RWDDKRVlAmVV7kSc5xxq2zu07sFxvHILluuh-lW9j2rkZNF61sEfdeSyTc9GKuzEpVd-fr6-iwLDcrlQUG6aXbMlOe2RN-u9U32YW8LzdpTr-ECs7swNDNhcGHAfZN2zgLY-0JeRtivQdH8_NlHChs4jf4p_FwxsP0-Dm9P_8RJ6dyEJr3svd2ifwCwfNWAw", "proto": "VLESS", "proto_color": "blue", "proto_icon": "🔵", "proto_gradient": "from-blue-400 to-cyan-400", "proto_name": "VLESS", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 107, "is_new": false, "status": "warning", "added_time": "20:26", "added_date": "2026-05-20", "age_hours": 23.6}, {"link": "exclave://vless?eNpTYWBgMDHTMzIy0zM0M9ez3HhGg4FhqYllmnFaarKRrmGikaGuiYVhqm5iqpmprnmysVFiqpGZkamFUV5-3tOS5A8gqrGxKDUxJ7PkZ25ihV7R1zUFRYnukYnpFpEBSVXxRckp8QGJZm6FxZnxnpmBJf7GqYaO-cWRTsmlZhkmxuYWBhZmaUkpSebJZobJT5IzivJznzJUlOQU6xYVFFXolmUWZ-bn6ZamFJiYbK4oTfnAwAF0MshWhgyj3NIfDCigkQlITHq7YM_b7ZvA5GojA4fUiuScxLLUsoI8kBIABm1Ssg", "proto": "VLESS", "proto_color": "blue", "proto_icon": "🔵", "proto_gradient": "from-blue-400 to-cyan-400", "proto_name": "VLESS", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 46, "is_new": false, "status": "active", "added_time": "09:57", "added_date": "2026-05-21", "age_hours": 10.1}, {"link": "exclave://trojan?eNpjYmBgUAFiY1M9IwMDPUMTQz0jo627GRkYGhtLkj_k5ec9BTJyPifmJubl6pUX5-el6mUmf20EAQYQAVLBwAE0AczIMMot_cGAAhp9zctUyw0Ng1NXMQG5k98u2PN2-zowuVnByNAhtSI5J7EstawgD6QaAO_KMEY", "proto": "TROJAN", "proto_color": "purple", "proto_icon": "🟣", "proto_gradient": "from-purple-400 to-pink-400", "proto_name": "Trojan", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 159, "is_new": false, "status": "active", "added_time": "09:57", "added_date": "2026-05-21", "age_hours": 10.1}];
-        const statsData = {"last_updated": "2026-05-21T20:03:09.880449", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 4, "new_servers": 0, "deleted_old": 14, "active_servers": 2, "idle_servers": 0, "warning_servers": 2, "avg_ping": 106, "most_country": "غير معروف", "most_country_count": 4, "countries": {"غير معروف": 4}, "by_protocol": {"vless": 3, "trojan": 1}};
+        const serversData = [{"link": "exclave://vless?eNpTYWBgMDHTMzIy0zM0M9ez3HhGg4FhqYllmnFaarKRrmGikaGuiYVhqm5iqpmprnmysVFiqpGZkamFUV5-3tOS5A8gqrGxKDUxJ7PkZ25ihV7R1zUFRYnukYnpFpEBSVXxRckp8QGJZm6FxZnxnpmBJf7GqYaO-cWRTsmlZhkmxuYWBhZmaUkpSebJZobJT5IzivJznzJUlOQU6xYVFFXolmUWZ-bn6ZamFJiYbK4oTfnAwAF0MshWhgyj3NIfDCigkQlITHq7YM_b7ZvA5GojA4fUiuScxLLUsoI8kBIABm1Ssg", "proto": "VLESS", "proto_color": "blue", "proto_icon": "🔵", "proto_gradient": "from-blue-400 to-cyan-400", "proto_name": "VLESS", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 88, "is_new": false, "status": "idle", "added_time": "09:57", "added_date": "2026-05-21", "age_hours": 12.4}, {"link": "exclave://trojan?eNpjYmBgUAFiY1M9IwMDPUMTQz0jo627GRkYGhtLkj_k5ec9BTJyPifmJubl6pUX5-el6mUmf20EAQYQAVLBwAE0AczIMMot_cGAAhp9zctUyw0Ng1NXMQG5k98u2PN2-zowuVnByNAhtSI5J7EstawgD6QaAO_KMEY", "proto": "TROJAN", "proto_color": "purple", "proto_icon": "🟣", "proto_gradient": "from-purple-400 to-pink-400", "proto_name": "Trojan", "flag": "🌍", "country": "غير معروف", "remark": "", "ping": 99, "is_new": false, "status": "idle", "added_time": "09:57", "added_date": "2026-05-21", "age_hours": 12.4}];
+        const statsData = {"last_updated": "2026-05-21T22:24:24.273232", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 2, "new_servers": 0, "deleted_old": 15, "active_servers": 0, "idle_servers": 2, "warning_servers": 0, "avg_ping": 93, "most_country": "غير معروف", "most_country_count": 2, "countries": {"غير معروف": 2}, "by_protocol": {"vless": 1, "trojan": 1}};
         const greetings = ["💪 أقوى السيرفرات بين يديك.", "⚡ سرعة وأمان في متناول اليد.", "🚀 انطلق بلا حدود مع Exclave.", "🛡️ درعك الرقمي جاهز.", "🔐 خصوصيتك أولويتنا.", "🌟 سيرفرات اليوم جاهزة للتصفح.", "💛 أهلاً بك! تصفح براحة تامة.", "📡 اتصال آمن · سرعة فائقة.", "🎯 دقة في الاختيار · حرية في التصفح.", "🌈 تصفح العالم كما تريد."];
         const MAX_AGE_HOURS = 24;
         let currentFilter = 'all';
         let chartInstances = {};
         const UPDATE_INTERVAL = 3 * 60 * 60;
-        const updateTime = new Date('2026-05-21T20:03:09.880449');
+        const updateTime = new Date('2026-05-21T22:24:24.273232');
         
         function getFavorites() { try { return JSON.parse(localStorage.getItem('doka_exclave_fav') || '[]'); } catch { return []; } }
         function saveFavorites(f) { localStorage.setItem('doka_exclave_fav', JSON.stringify(f)); }
@@ -386,7 +386,7 @@
             }
         })();
         
-        function uv() { document.getElementById('visitor-count').textContent = Math.max(1, 4 + Math.floor(Math.random()*20)-8); }
+        function uv() { document.getElementById('visitor-count').textContent = Math.max(1, 2 + Math.floor(Math.random()*20)-8); }
         uv(); setInterval(uv, 12000);
         
         document.getElementById('show-stats-btn').addEventListener('click', () => {
