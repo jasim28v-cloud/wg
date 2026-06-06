@@ -239,13 +239,13 @@
 
     <script>
         const serversData = [];
-        const statsData = {"last_updated": "2026-06-06T16:13:04.718680", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 0, "new_servers": 0, "deleted_old": 2, "active_servers": 0, "idle_servers": 0, "warning_servers": 0, "avg_ping": 0, "most_country": "غير محدد", "most_country_count": 0, "countries": {}, "by_protocol": {}};
+        const statsData = {"last_updated": "2026-06-06T19:41:41.654947", "source": "Exclave VPN", "max_age_hours": 24, "total_servers": 0, "new_servers": 0, "deleted_old": 1, "active_servers": 0, "idle_servers": 0, "warning_servers": 0, "avg_ping": 0, "most_country": "غير محدد", "most_country_count": 0, "countries": {}, "by_protocol": {}};
         const greetings = ["💪 أقوى السيرفرات بين يديك.", "⚡ سرعة وأمان في متناول اليد.", "🚀 انطلق بلا حدود مع Exclave.", "🛡️ درعك الرقمي جاهز.", "🔐 خصوصيتك أولويتنا.", "🌟 سيرفرات اليوم جاهزة للتصفح.", "💛 أهلاً بك! تصفح براحة تامة.", "📡 اتصال آمن · سرعة فائقة.", "🎯 دقة في الاختيار · حرية في التصفح.", "🌈 تصفح العالم كما تريد."];
         const MAX_AGE_HOURS = 24;
         let currentFilter = 'all';
         let chartInstances = {};
         const UPDATE_INTERVAL = 3 * 60 * 60;
-        const updateTime = new Date('2026-06-06T16:13:04.718680');
+        const updateTime = new Date('2026-06-06T19:41:41.654947');
         
         function getFavorites() { try { return JSON.parse(localStorage.getItem('doka_exclave_fav') || '[]'); } catch { return []; } }
         function saveFavorites(f) { localStorage.setItem('doka_exclave_fav', JSON.stringify(f)); }
